@@ -1,0 +1,71 @@
+body{
+	font-family: Open Sans;
+	font-size: 0.9em;
+	background: #ED5E1F;
+}
+section{
+	display: flex;
+	justify-content: center;
+}
+section form{
+	display: block;
+	width: 35%;
+	background: white;
+	margin-top: 4vw;
+	text-align: center;
+}
+section form legend{
+	margin: 2vw 2vw 1vw 2vw;
+	font-size: 1.8em;
+}
+section form>p{
+	margin: 1vw 2vw 2vw 2vw;
+	padding-bottom: 1.5vw;
+	font-size: 0.8em;
+	border-bottom: 1px #bfbfbf solid;
+}
+section form label{
+	display: block;
+}
+section form input{
+	border: 1.4px #bfbfbf solid;
+	border-radius: 6px;
+	padding: 0.5vw 0 0.5vw 0vw;
+	width: 60%;
+	margin: 0.5vw 0 1.5vw 0;
+	font-size: 0.9em;
+}
+section form input.enviar{
+	background: #1378E9;
+	color: white;
+	border-bottom: 3px #2058FF solid;
+	padding: 1vw 2vw 1vw 2vw;
+	margin: 2vw 0 2vw 0;
+	font-size: 1em;
+	width: 65%;
+}
+section form textarea{
+	border: 1.4px #bfbfbf solid;
+	border-radius: 6px;
+	padding-bottom: 5vw;
+	width: 60%;
+	resize: none;
+	overflow: hidden;
+	font-size: 1em;
+}
+section form input.nome{
+	background: url(../img/icon-user.png) no-repeat left;
+	padding-left: 2vw;
+}
+section form input.telefone{
+	background: url(../img/icon-phone.png) no-repeat left;
+	padding-left: 2vw;
+}
+section form input.email{
+	background: url(../img/icon-email.png) no-repeat left;
+	padding-left: 2vw;
+}
+section form textarea.mensagem{
+	background: url(../img/icon-info.png) no-repeat left top;
+	padding-left: 2vw;
+}
