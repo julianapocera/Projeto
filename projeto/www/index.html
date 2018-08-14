@@ -13,18 +13,18 @@
 <body>
   <section>
 	     <section class="inicio">
-  		          <form method="get" action="#"> 	
+  		          <form method="get" action="#" name="f1"> 	
           	
                 <legend>Registre a venda</legend>
 
-                <label for="produto">Produto:</label>
-                <select name="produto" id="produto">
-                  <option>Coxinha</option>
-                  <option>Risolis</option>
-                  <option>Pastel</option>
-                  <option>Cuca</option>
-                  <option>Kibe</option>
-                </select> 
+                <label for="produto">Produto</label>
+                <select name="produto" id="produto" class="produto">
+                  <option value="coxinha">Coxinha</option>
+                  <option class="risolis">Risolis</option>
+                  <option class="pastel">Pastel</option>
+                  <option class="cuca">Cuca</option>
+                  <option class="kibe">Kibe</option>
+                  </select> 
 
                 <label for="valor">Valor:</label>
                 <input class="valor" type="text" name="valor" id="valor">
@@ -48,6 +48,34 @@
   </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+  produto = $(".produto");
+  valor = $(".valor");
+  quant = $(".quant");
+  total = $(".total");
+
+  var preco = 0;
+  $(".valor").disable() = true;
+  $(".total").disable() = true;
+
+produto.on("click", function(){
+  var value = document.f1.produto.value;
+
+   if(value == "Risolis"){
+      $(".valor").val("4.00");
+  } else if(value == "Pastel"){
+      $(".valor").val("3.00 R$");
+  } else if(value == "Cuca"){
+    $(".valor").val("2.00");
+  } else if(value == "Coxinha"){
+    $(".valor").val("4.50");
+    console.log("coxinha");
+  } else {
+    $(".valor").val("3.50");
+  }
+});
+
+
+</script>
 </body>
 </html>
