@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Entre em contato conosco</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="AnaJulia Hoefling">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	     <section class="inicio">
+  		          <form method="get" action="#" name="f1"> 	
+          	
+                <legend>Registre a venda</legend>
+
+                <label for="produto">Produto</label>
+                <select name="produto" id="produto" class="produto">
+                  <option value="coxinha">Coxinha</option>
+                  <option class="risolis">Risolis</option>
+                  <option class="pastel">Pastel</option>
+                  <option class="cuca">Cuca</option>
+                  <option class="kibe">Kibe</option>
+                  </select> 
+
+                <label for="valor">Valor</label>
+                <input class="valor" type="text" name="valor" id="valor">
+
+                <label for="quant">Quantidade</label>
+                  <select name="quant" id="quant">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select> 
+          			
+                <label for="total">Total</label>
+                <input class="total" type="total" name="total" id="total">
+
+                <br><input class="enviar" type="submit" name="enviar" value="Enviar Formulário">	
+
+  	             </form>
+  	   </section>	
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+  produto = $(".produto");
+  valor = $(".valor");
+  quant = $(".quant");
+  total = $(".total");
+
+  var preco = 0;
+  $(".valor").disable() = true;
+  $(".total").disable() = true;
+
+produto.on("click", function(){
+  var value = document.f1.produto.value;
+
+   if(value == "Risolis"){
+      $(".valor").val("4.00");
+  } else if(value == "Pastel"){
+      $(".valor").val("3.00 R$");
+  } else if(value == "Cuca"){
+    $(".valor").val("2.00");
+  } else if(value == "Coxinha"){
+    $(".valor").val("4.50");
+    console.log("coxinha");
+  } else {
+    $(".valor").val("3.50");
+  }
+});
+
+
+</script>
+</body>
+</html>
