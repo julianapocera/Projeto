@@ -19,18 +19,19 @@
 
                 <label for="produto">Produto</label>
                 <select name="produto" id="produto" class="produto">
-                  <option value="coxinha">Coxinha</option>
+                  <option>Selecione</option>
                   <option class="risolis">Risolis</option>
                   <option class="pastel">Pastel</option>
                   <option class="cuca">Cuca</option>
                   <option class="kibe">Kibe</option>
+                  <option class="pizza">Pizza</option>
                   </select> 
 
                 <label for="valor">Valor:</label>
-                <input class="valor" type="text" name="valor" id="valor">
+                <input class="valor" type="text" name="valor" id="valor" readonly>
 
-                <label for="quant">Quant:</label>
-                  <select name="quant" id="quant">
+                <label for="quant">Quantidade:</label>
+                  <select name="quant" id="quant" class="quant">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -39,7 +40,7 @@
                   </select> 
           			
                 <label for="total">Total:</label>
-                <input class="total" type="total" name="total" id="total">
+                <input class="total" type="total" name="total" id="total" readonly>
 
                 <br><input class="enviar" type="submit" name="enviar" value="Enviar">	
 
@@ -53,26 +54,39 @@
   valor = $(".valor");
   quant = $(".quant");
   total = $(".total");
-
+  enviar = $(".enviar");
   var preco = 0;
-  $(".valor").disable() = true;
-  $(".total").disable() = true;
 
 produto.on("click", function(){
   var value = document.f1.produto.value;
 
    if(value == "Risolis"){
       $(".valor").val("4.00");
+      preco = 4;
   } else if(value == "Pastel"){
-      $(".valor").val("3.00 R$");
+      $(".valor").val("3.00");
+      preco = 3;
   } else if(value == "Cuca"){
     $(".valor").val("2.00");
-  } else if(value == "Coxinha"){
-    $(".valor").val("4.50");
-    console.log("coxinha");
-  } else {
-    $(".valor").val("3.50");
+    preco = 2;
+  } else if(value == "Kibe"){
+    $(".valor").val("3.00");
+    preco = 3.5;
+  } else if(value == "Pizza"){
+    $(".valor").val("5.00");
+    preco = 5;
   }
+});
+
+quant.on("click", function(){
+  var quanti = document.f1.quant.value;
+  var result = 0;
+  result = preco*quanti;
+  $(".total").val(result+".00");
+});
+
+enviar.on("click", function{
+  //proxima tela
 });
 
 
