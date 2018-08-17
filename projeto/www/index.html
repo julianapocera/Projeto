@@ -65,10 +65,6 @@ produto.on("click", function(){
 
   if(value == "Risolis"){
     $(".valor").val("4.00");
-  }else if(value == "Pastel"){
-    $(".valor").val("3.00 R$");
-  }else if(value == "Risolis"){
-    $(".valor").val("4.00");
     preco = 4;
   }else if(value == "Pastel"){
     $(".valor").val("3.00");
@@ -78,7 +74,7 @@ produto.on("click", function(){
     preco = 2;
   }else if(value == "Kibe"){
     $(".valor").val("3.00");
-    preco = 3.5;
+    preco = 3;
   }else if(value == "Pizza"){
     $(".valor").val("5.00");
     preco = 5;
@@ -92,7 +88,7 @@ quant.on("click", function(){
   $(".total").val(result+".00");
 });
 
-enviar.on("click", function{
+enviar.on("click", function(){
   //proxima tela
 });
 </script>
