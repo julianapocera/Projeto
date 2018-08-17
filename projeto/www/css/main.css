@@ -3,7 +3,6 @@ body{
 	font-size: 0.9em;
 }
 section.inicio{
-	display: none;
 	display: flex;
 	justify-content: center;
 	background: #ffcc80;
@@ -60,4 +59,7 @@ section.inicio form input.enviar{
 	margin-left: 15vw;
 	font-size: 1.8em;
 	width: 70%;
+}
+section.tela2{
+	display: none;
 }

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <section>
 	     <section class="inicio">
   		          <form method="get" action="#" name="f1"> 	
           	
@@ -44,37 +43,40 @@
                 <label for="total">Total:</label>
                 <input class="total" type="total" name="total" id="total" readonly>
 
-                <br><input class="enviar" type="submit" name="enviar" value="Enviar">	
+               <!--  <br><input class="enviar" type="submit" name="enviar" value="Enviar">	 -->
 
   	             </form>
+                 <button class="enviar">Enviar</button>
   	   </section>
        <section class="tela2">
-          <form method="get" action="#" name="f1">                 
-                <legend>Histórico de Vendas</legend>
+          <form method="get" action="#" name="f2">  
+            <legend>Histórico de venda</legend>
 
-                <label for="quant_vendas">Quantidade de compras:</label>
-                <input class="quant_vendas" type="text" name="quant_vendas" id="quant_vendas" readonly>
-                
-                <label for="total_compras">Total das vendas:</label>
-                <input class="total_compras" type="total_compras" name="total_compras" id="total_compras" readonly>
+            <label for="quant_total">Total compras:</label>
+            <input class="quant_total" type="text" name="quant_total" id="quant_total" readonly>
 
-                <br><input class="voltar" type="submit" name="voltar" value="voltar"> 
+            <label for="valor_total">Valor total compras:</label>
+            <input class="valor_total" type="text" name="valor_total" id="valor_total" readonly>
 
-                 </form>            
+          <!--   <br><input class="voltar" type="submit" name="voltar" value="voltar">  -->
+          </form>
+            <button class="voltar">Voltar</button>
        </section>
-  </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
   produto = $(".produto");
-  valor = $(".valor");
   quant = $(".quant");
-  total = $(".total");
   enviar = $(".enviar");
+  inicio = $(".inicio");
+  tela2 = $(".tela2");
+  voltar = $(".voltar");
   var preco = 0;
+  var compras = 0;
+  var tot = 0;
+  var result = 0;
 
 produto.on("click", function(){
-
   var value = document.f1.produto.value;
 
   if(value == "Risolis"){
@@ -92,19 +94,39 @@ produto.on("click", function(){
   }else if(value == "Pizza"){
     $(".valor").val("5.00");
     preco = 5;
+  } else {
+      $(".valor").val(null);
+      $(".total").val(null);
+      $(".quant").val(1);
   }
 });
 
 quant.on("click", function(){
   var quanti = document.f1.quant.value;
-  var result = 0;
   result = preco*quanti;
   $(".total").val(result+".00");
 });
 
 enviar.on("click", function(){
-  //proxima tela
+  inicio.hide();
+  tela2.show();
+  compras++;
+  tot+= result;
+
+  $(".quant_total").val(compras);
+  $(".valor_total").val(tot+".00");
 });
+
+voltar.on("click", function(){
+  inicio.show();
+  tela2.hide();
+
+   $(".total").val(null);
+   $(".valor").val(null);
+   $(".quant").val(1);
+   $(".produto").val("Selecione");
+});
+
 </script>
 </body>
 </html>
