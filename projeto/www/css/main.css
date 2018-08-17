@@ -41,7 +41,6 @@ section.inicio form label{
 	margin-bottom: 5vw;
 }
 section.inicio form input{
-	
 	display: block;
 	border: none;
 	border-radius: 5vw;
@@ -51,15 +50,68 @@ section.inicio form input{
 	margin-bottom: 8vw;
 	margin-left: 15vw;
 }
-section.inicio form input.enviar{
+section.inicio form button.enviar{
 	background: #ffad33;
 	color: white;
 	border-bottom: 3px grey solid;
+	border-radius: 5vw;
 	padding: 3vw 8vw;
-	margin-left: 15vw;
+	margin-left: 5vw;
 	font-size: 1.8em;
 	width: 70%;
 }
+
+
+
 section.tela2{
 	display: none;
+}
+section.tela2{
+	display: flex;
+	justify-content: center;
+	background: #ffcc80;
+	height: 100vh;
+}
+section.tela2 form{
+	display: block;
+	padding: 0.5vw 0 0.5vw 0vw;
+	width: 95%;
+	background: #ffe0b3;
+	text-align: center;
+}
+section.tela2 form img{
+	width: 50%;
+	text-align: center;
+}
+section.tela2 form legend{
+	margin: 5vw 2vw 10vw 2vw;
+	font-size: 2em;
+	text-shadow: 1px 1px 1px #000;
+	color: white;
+}
+section.tela2 form button.voltar{
+	background: #ffad33;
+	color: white;
+	border-bottom: 3px grey solid;
+	border-radius: 5vw;
+	padding: 3vw 8vw;
+	margin-left: 10vw;
+	font-size: 1.8em;
+	width: 70%;
+}
+section.tela2 form input{
+	display: block;
+	border: none;
+	border-radius: 5vw;
+	padding: 0.5vw 1vw 0.5vw 1vw;
+	width: 70%;
+	font-size: 1em;
+	margin-bottom: 8vw;
+	margin-left: 15vw;
+}
+section.tela2 form label{
+	font-family: calibri;
+	font-size: 1.2em;
+	color: #cc7a00;
+	margin-bottom: 5vw;
 }
