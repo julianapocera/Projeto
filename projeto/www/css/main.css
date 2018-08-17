@@ -11,57 +11,52 @@ section{
 section.inicio form{
 	display: block;
 	padding: 0.5vw 0 0.5vw 0vw;
-	width: 90%;
+	width: 95%;
 	background: #ffe0b3;
 	text-align: center;
 }
-section.inicio form select{
-	border: none;
-	display: inline-block;
-	width: 80%;
+section.inicio form img{
+	width: 50%;
 	text-align: center;
-	margin-bottom: 5vw;
 }
-
-section.inicio form select.produto{
-	padding: 8vw 1vw;
+section.inicio form select{
+	text-align: center;
+	display: block;
+	border: none;
+	width: 70%;
+	border-radius: 4vw;
+	margin-bottom: 8vw;
+	margin-left: 15vw;
 }
-
-
 section.inicio form legend{
 	margin: 5vw 2vw 10vw 2vw;
 	font-size: 2em;
 	text-shadow: 1px 1px 1px #000;
 	color: white;
-
 }
-
 section.inicio form label{
-	display: inline;
 	font-family: calibri;
 	font-size: 1.2em;
 	color: #cc7a00;
-
-}
-
-
-section.inicio form input{
-	border: none;
-	/*border: 1.4px #bfbfbf solid;
-	border-radius: 6px;*/
-	padding: 0.5vw 0 0.5vw 0vw;
-	width: 80%;
-	font-size: 1em;
 	margin-bottom: 5vw;
 }
-
-
+section.inicio form input{
+	
+	display: block;
+	border: none;
+	border-radius: 5vw;
+	padding: 0.5vw 1vw 0.5vw 1vw;
+	width: 70%;
+	font-size: 1em;
+	margin-bottom: 8vw;
+	margin-left: 15vw;
+}
 section.inicio form input.enviar{
 	background: #ffad33;
 	color: white;
-	border-bottom: 3px #cc7a00 solid;
+	border-bottom: 3px grey solid;
 	padding: 3vw 8vw;
-	margin: 2vw 0;
+	margin-left: 15vw;
 	font-size: 1.8em;
-	width: 60%;
+	width: 70%;
 }
