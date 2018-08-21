@@ -59,12 +59,8 @@ section.inicio button.enviar{
 	font-size: 1.8em;
 }
 
-
-
 section.tela2{
 	display: none;
-}
-section.tela2{
 	display: flex;
 	justify-content: center;
 	background: #ffcc80;
@@ -95,17 +91,6 @@ section.tela2 button.voltar{
 	border-radius: 5vw;
 	font-size: 1.8em;
 }
-
-/*section.tela2 form button.voltar{
-	background: #ffad33;
-	color: white;
-	border-bottom: 3px grey solid;
-	border-radius: 5vw;
-	padding: 3vw 8vw;
-	margin-left: 10vw;
-	font-size: 1.8em;
-	width: 70%;
-}*/
 section.tela2 form input{
 	display: block;
 	border: none;

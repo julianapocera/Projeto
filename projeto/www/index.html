@@ -42,10 +42,9 @@
           			
                 <label for="total">Total:</label>
                 <input class="total" type="total" name="total" id="total" readonly>
-
-               <!--  <br><input class="enviar" type="submit" name="enviar" value="Enviar">	 -->
   	             </form>
                  <button class="enviar">></button>
+
   	   </section>
        <section class="tela2">
 
@@ -60,7 +59,6 @@
             <label for="valor_total">Valor total compras:</label>
             <input class="valor_total" type="text" name="valor_total" id="valor_total" readonly>
 
-          <!--   <br><input class="voltar" type="submit" name="voltar" value="voltar">  --> 
           </form>
           
        </section>
@@ -77,6 +75,9 @@
   var compras = 0;
   var tot = 0;
   var result = 0;
+  tela2.hide();
+$(".total").val(result+".00");
+$(".valor").val("0.00");
 
   mouseclick = new Audio("audio/mouseclick.mp3");
   click = new Audio("audio/clique.mp3");
@@ -104,7 +105,10 @@ produto.on("click", function(){
       $(".valor").val(null);
       $(".total").val(null);
       $(".quant").val(1);
-  }
+  }    
+
+  $(".total").val(preco+".00");
+
 });
 
 quant.on("click", function(){
@@ -115,6 +119,7 @@ quant.on("click", function(){
 });
 
 enviar.on("click", function(){
+
   mouseclick.play();
   inicio.hide();
   tela2.show();
@@ -130,10 +135,11 @@ voltar.on("click", function(){
   inicio.show();
   tela2.hide();
 
-   $(".total").val(null);
-   $(".valor").val(null);
-   $(".quant").val(1);
-   $(".produto").val("Selecione");
+  $(".valor").val("0.00");
+  $(".total").val(result+".00");
+  $(".quant").val(1);
+  $(".produto").val("Selecione");
+  $(".total").val(result+".00");
 });
 
 </script>
