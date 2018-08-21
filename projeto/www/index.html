@@ -42,10 +42,8 @@
           			
                 <label for="total">Total:</label>
                 <input class="total" type="total" name="total" id="total" readonly>
-
-               <!--  <br><input class="enviar" type="submit" name="enviar" value="Enviar">	 -->
-                <button class="enviar">Enviar</button>
   	             </form>
+                 <button class="enviar">Enviar</button>
                
   	   </section>
        <section class="tela2">
@@ -59,8 +57,8 @@
             <input class="valor_total" type="text" name="valor_total" id="valor_total" readonly>
 
           <!--   <br><input class="voltar" type="submit" name="voltar" value="voltar">  --> 
-           <button class="voltar">Voltar</button>
           </form>
+                <button class="voltar">Voltar</button>
           
        </section>
 
@@ -76,6 +74,9 @@
   var compras = 0;
   var tot = 0;
   var result = 0;
+  tela2.hide();
+$(".total").val(result+".00");
+$(".valor").val("0.00");
 
 produto.on("click", function(){
   var value = document.f1.produto.value;
@@ -99,7 +100,10 @@ produto.on("click", function(){
       $(".valor").val(null);
       $(".total").val(null);
       $(".quant").val(1);
-  }
+  }    
+
+  $(".total").val(preco+".00");
+
 });
 
 quant.on("click", function(){
@@ -109,10 +113,11 @@ quant.on("click", function(){
 });
 
 enviar.on("click", function(){
-  inicio.hide();
-  tela2.show();
-  compras++;
-  tot+= result;
+    console.log("pq");
+    inicio.hide();
+    tela2.show();
+    compras++;
+    tot+= result;
 
   $(".quant_total").val(compras);
   $(".valor_total").val(tot+".00");
@@ -122,10 +127,11 @@ voltar.on("click", function(){
   inicio.show();
   tela2.hide();
 
-   $(".total").val(null);
-   $(".valor").val(null);
-   $(".quant").val(1);
-   $(".produto").val("Selecione");
+  $(".valor").val("0.00");
+  $(".total").val(result+".00");
+  $(".quant").val(1);
+  $(".produto").val("Selecione");
+  $(".total").val(result+".00");
 });
 
 </script>
