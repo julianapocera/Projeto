@@ -50,15 +50,13 @@ section.inicio form input{
 	margin-bottom: 8vw;
 	margin-left: 15vw;
 }
-section.inicio form button.enviar{
+section.inicio button.enviar{
 	background: #ffad33;
 	color: white;
+	border: none;
 	border-bottom: 3px grey solid;
 	border-radius: 5vw;
-	padding: 3vw 8vw;
-	margin-left: 5vw;
 	font-size: 1.8em;
-	width: 70%;
 }
 
 section.tela2{
@@ -85,15 +83,13 @@ section.tela2 form legend{
 	text-shadow: 1px 1px 1px #000;
 	color: white;
 }
-section.tela2 form button.voltar{
+section.tela2 button.voltar{
 	background: #ffad33;
 	color: white;
+	border: none;
 	border-bottom: 3px grey solid;
 	border-radius: 5vw;
-	padding: 3vw 8vw;
-	margin-left: 10vw;
 	font-size: 1.8em;
-	width: 70%;
 }
 section.tela2 form input{
 	display: block;
