@@ -74,6 +74,7 @@
   var compras = 0;
   var tot = 0;
   var result = 0;
+  var i = 0;
   tela2.hide();
 $(".total").val(result+".00");
 $(".valor").val("0.00");
@@ -81,7 +82,9 @@ $(".valor").val("0.00");
 produto.on("click", function(){
   var value = document.f1.produto.value;
 
-  if(value == "Risolis"){
+  if(value == "Selecione"){
+    i ++;
+  }else if(value == "Risolis"){
     $(".valor").val("4.00");
     preco = 4;
   }else if(value == "Pastel"){
@@ -113,14 +116,19 @@ quant.on("click", function(){
 });
 
 enviar.on("click", function(){
-    console.log("pq");
+
+  if(i == 2 || i == 0){
+    alert("Escolha um produto");
+  } else {
     inicio.hide();
     tela2.show();
     compras++;
     tot+= result;
+    i = 0;
 
   $(".quant_total").val(compras);
   $(".valor_total").val(tot+".00");
+  }
 });
 
 voltar.on("click", function(){
