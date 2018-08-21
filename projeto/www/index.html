@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Entre em contato conosco</title>
+  <title>appVendas</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="AnaJulia Hoefling">
@@ -44,11 +44,13 @@
                 <input class="total" type="total" name="total" id="total" readonly>
 
                <!--  <br><input class="enviar" type="submit" name="enviar" value="Enviar">	 -->
-                <button class="enviar">Enviar</button>
   	             </form>
-               
+                 <button class="enviar">></button>
   	   </section>
        <section class="tela2">
+
+         <button class="voltar"><</button>
+        
           <form method="get" action="#" name="f2">  
             <legend>Histórico de venda</legend>
 
@@ -59,7 +61,6 @@
             <input class="valor_total" type="text" name="valor_total" id="valor_total" readonly>
 
           <!--   <br><input class="voltar" type="submit" name="voltar" value="voltar">  --> 
-           <button class="voltar">Voltar</button>
           </form>
           
        </section>
@@ -77,7 +78,11 @@
   var tot = 0;
   var result = 0;
 
+  mouseclick = new Audio("audio/mouseclick.mp3");
+  click = new Audio("audio/clique.mp3");
+
 produto.on("click", function(){
+  click.play();
   var value = document.f1.produto.value;
 
   if(value == "Risolis"){
@@ -103,12 +108,14 @@ produto.on("click", function(){
 });
 
 quant.on("click", function(){
+  click.play();
   var quanti = document.f1.quant.value;
   result = preco*quanti;
   $(".total").val(result+".00");
 });
 
 enviar.on("click", function(){
+  mouseclick.play();
   inicio.hide();
   tela2.show();
   compras++;
@@ -119,6 +126,7 @@ enviar.on("click", function(){
 });
 
 voltar.on("click", function(){
+  mouseclick.play();
   inicio.show();
   tela2.hide();
 
